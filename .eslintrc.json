@@ -2,7 +2,8 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "ignorePatterns": [".next/", "node_modules/", ".pnp.cjs", ".pnp.loader.mjs"],
   "plugins": [
@@ -10,6 +11,8 @@
     "simple-import-sort",
     "unused-imports",
     "flowtype",
+    "jest",
+    "testing-library",
     "@emotion"
   ],
   "extends": [
@@ -116,6 +119,12 @@
         "varsIgnorePattern": "^_",
         "args": "after-used",
         "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "jest.setup.js"]
       }
     ],
     "react/jsx-props-no-spreading": "off",
