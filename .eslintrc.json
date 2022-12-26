@@ -9,7 +9,8 @@
     "@typescript-eslint",
     "simple-import-sort",
     "unused-imports",
-    "flowtype"
+    "flowtype",
+    "@emotion"
   ],
   "extends": [
     "airbnb",
